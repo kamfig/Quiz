@@ -1,11 +1,32 @@
+import javafx.scene.layout.Background;
+
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class Main extends JFrame {
+
+                // ma zawierać pytanie na górze
+                // ma zawierać 2 przyciski tak i nie
+
+        public Main(){
+            super ("Milionerzy"); // title okna
+            setSize(500,500); // wielkosc okna
+            setDefaultCloseOperation(0); // sprawia że działa exit
+            setVisible(true);  // ustawaia okno jako widoczne - defaultowo - ukryte
+
+            setBackground(Color.getHSBColor(100,50,30));
+        }
+
+
 
     public static void main(String[] args) {
-        List<Question>questionList=new ArrayList<>();
+
+            Main main = new Main();
+
+            List<Question>questionList=new ArrayList<>();
 
         questionList.add(new Question("Czy Polska Leży w Europie",true));
         questionList.add(new Question("Lubisz placki?",true));
